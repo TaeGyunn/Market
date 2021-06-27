@@ -14,6 +14,9 @@ Spring Mvc
 ### Ect
 네이버 로그인 연동(홈페이지 구현은 x, db연결 완료)
 
+### 화면
+![메인페이지](https://user-images.githubusercontent.com/84495814/123545053-325b3500-d791-11eb-93d2-3aa24ecd503c.jpg)
+
 
 
 
