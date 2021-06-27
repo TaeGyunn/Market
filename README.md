@@ -15,6 +15,7 @@ Spring Mvc
 네이버 로그인 연동(홈페이지 구현은 x, db연결 완료)
 
 ### 화면
+![메인페이지](https://user-images.githubusercontent.com/84495814/123545273-29b72e80-d792-11eb-89e1-959cc270185e.jpg)
 
 
 
