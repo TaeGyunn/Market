@@ -18,7 +18,9 @@ Spring Mvc
 1. 메인페이지
 ![메인페이지](https://user-images.githubusercontent.com/84495814/123545273-29b72e80-d792-11eb-89e1-959cc270185e.jpg)
 
-2. 
+2. 회원가입
+![회원가입1](https://user-images.githubusercontent.com/84495814/123545341-70a52400-d792-11eb-89eb-3aea46243191.jpg)
+![회원가입2](https://user-images.githubusercontent.com/84495814/123545343-726ee780-d792-11eb-9286-458fec96418b.jpg)
 
 
 
