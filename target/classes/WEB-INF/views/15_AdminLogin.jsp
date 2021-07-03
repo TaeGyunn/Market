@@ -7,7 +7,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<style>
+<style> 
 	*{margin:0 auto;}
 	.main{ width:1024px;}
 	.main1{

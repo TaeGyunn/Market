@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+ 
 
 	<a href="/adminLogout">로그아웃</a>
 	<table border= "1">

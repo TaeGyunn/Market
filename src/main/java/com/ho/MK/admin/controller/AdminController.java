@@ -14,7 +14,7 @@ import com.ho.MK.admin.service.AdminService;
 @Controller
 public class AdminController {
 	
-
+ 
 	@Autowired
 	private AdminService service;
 

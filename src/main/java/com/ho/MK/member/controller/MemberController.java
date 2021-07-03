@@ -62,7 +62,7 @@ public class MemberController {
 		session.invalidate();
 		
 		return "/09_Logout";
-	}
+	} 
 	
 	//Modify
 	@RequestMapping(value="/10_Modify")

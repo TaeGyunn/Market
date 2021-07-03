@@ -8,7 +8,7 @@ public class Admin {
 	private String Admin_reg_date;
 	private String Admin_address;
 	private String Admin_tel;
-	
+	 
 	public String getAdmin_id() {
 		return Admin_id;
 	}
