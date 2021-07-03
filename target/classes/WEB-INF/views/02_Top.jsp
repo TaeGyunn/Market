@@ -118,7 +118,7 @@
 							|
 							<a href="${cp}/07_Login">로그인</a>
 							|
-							<a href="/naverlogin">네이버 로그인</a>
+							<a href="/15_AdminLogin">관리자 로그인</a>
 							|
 							<a href="#" onmouseover="on()">고객센터▼</a>
 							<div class="login" id="login" onmouseleave="off()">

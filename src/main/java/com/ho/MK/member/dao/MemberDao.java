@@ -109,5 +109,6 @@ public class MemberDao implements IMemberDao{
 		
 		return result;
 	}
+	
 
 }

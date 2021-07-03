@@ -8,8 +8,6 @@ public class Member {
 	private String memEmail;
 	private String memNumber;
 	
-	
-	
 	public String getMemId() {
 		return memId;
 	}
