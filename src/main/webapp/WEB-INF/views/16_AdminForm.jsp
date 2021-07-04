@@ -16,12 +16,12 @@
 		</tr>
 		<tr>
 			<td>
-				<a href="">상품등록</a>
+				<a href="/17_AdminProduct">상품등록</a>
 			</td>
 		</tr>
 		<tr>
 			<td>
-				<a href="">상품 수정/ 삭제</a>
+				<a href="/18_ProductModify">상품 수정/ 삭제</a>
 			</td>
 		</tr>
 		<tr>

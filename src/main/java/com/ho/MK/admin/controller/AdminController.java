@@ -17,6 +17,12 @@ public class AdminController {
  
 	@Autowired
 	private AdminService service;
+	
+	@RequestMapping("/16_AdminForm")
+	public String AdminForm(@ModelAttribute("ad")Admin admin){
+		return "/16_AdminForm";
+	}
+	
 
 	//Login
 	@RequestMapping("/15_AdminLogin")
@@ -42,4 +48,5 @@ public class AdminController {
 		
 		return"/09_Logout";
 	}
+		
 }
