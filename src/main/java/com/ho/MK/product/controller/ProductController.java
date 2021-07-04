@@ -32,9 +32,11 @@ public class ProductController {
 			public String ProducRegister(@ModelAttribute("pro")Product product, MultipartHttpServletRequest request) {
 				
 				MultipartFile mf = request.getFile("pro_image");
-				String path = request.getRealPath("resources/uploadimg");
+				if(mf == null) {System.out.println("null");}
+				String path = request.getSession().getServletContext().getRealPath("/");
+				String attach_path = "resources/uploadimg/";
 				String fileName = mf.getOriginalFilename();
-				File uploadFile = new File(path +"/"+fileName);
+				File uploadFile = new File(path+attach_path+fileName);
 				try {
 					mf.transferTo(uploadFile);
 				}catch(IllegalStateException e) {

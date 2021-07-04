@@ -10,7 +10,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<a href="">관리자 메인으로</a>
+	<a href="/16_AdminForm">관리자 메인으로</a>
 	<p></p>
 	<h2>상품목록</h2>
 	<table border = "1">
@@ -26,7 +26,7 @@
 					${pro.pro_id}
 				</td>
 				<td>
-					<img src ="/resources/uploadimg" width="120px" height="110px">
+					<img src ="/resources/uploadimg/${pro.proimg}" width="120px" height="110px">
 				</td>
 				<td>
 					<a href="/">${pro.pro_name}</a>

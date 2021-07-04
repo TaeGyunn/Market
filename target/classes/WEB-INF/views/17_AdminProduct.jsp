@@ -64,7 +64,7 @@
 			<tr>
 				<td width="100">이미지</td>
 				<td width="400">
-					<input type="file" name ="pro_image" />
+					<input type="file" name ="pro_image" maxlength="500" />
 				</td>
 			</tr>
 			<tr>
