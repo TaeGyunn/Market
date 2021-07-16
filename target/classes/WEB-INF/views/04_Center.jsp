@@ -21,14 +21,14 @@
 		border:none; cursor:pointer; padding:0; display: none;
 	}
 	.left{
-		position: absolute; left : 20%; top:55%;
+		position: absolute; left : 20%; top:35%;
 		
 	}
 	.right{
-		position: absolute;	right: 20%; top:55%;
+		position: absolute;	right: 20%; top:35%;
 	}	
 	.btn-img{
-		width:35px; height:35px; 
+		width:35px; height:350px; 
 	}
 </style>
 </head>

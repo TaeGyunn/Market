@@ -59,6 +59,7 @@ public class ProductDao implements IProductDao {
 				Product pro = new Product();
 				pro.setPro_id(rs.getInt("pro_id"));
 				pro.setPro_name(rs.getString("pro_name"));
+				pro.setPro_kind(rs.getString("pro_kind"));
 				pro.setPro_price(rs.getInt("pro_price"));
 				pro.setPro_unit(rs.getString("pro_unit"));
 				pro.setPro_weight(rs.getString("pro_weight"));
@@ -69,5 +70,51 @@ public class ProductDao implements IProductDao {
 		});
 		if(products.isEmpty()) return null;
 		return products;
+	}
+	
+	@Override
+	public Product productSelect(final int proid) {
+		
+		List<Product> products = null;
+		System.out.println(proid);
+		final String sql = "SELECT * FROM product WHERE pro_id = ?";
+		products = template.query(sql, new Object[]{proid}, new RowMapper<Product>() {
+			
+			@Override
+			public Product mapRow(ResultSet rs, int rowNum) throws SQLException{
+				Product pro = new Product();
+				pro.setPro_id(rs.getInt("pro_id"));
+				pro.setPro_name(rs.getString("pro_name"));
+				pro.setPro_kind(rs.getString("pro_kind"));
+				pro.setPro_price(rs.getInt("pro_price"));
+				pro.setPro_unit(rs.getString("pro_unit"));
+				pro.setPro_weight(rs.getString("pro_weight"));
+				pro.setPro_packaging(rs.getString("pro_packaging"));
+				pro.setPro_img(rs.getString("pro_img"));
+				return pro;
+			}
+		});
+		if(products.isEmpty()) return null;
+		return products.get(0);
+	}
+	
+	@Override
+	public int productUpdate(final Product product) {
+		
+		int result = 0;
+		
+		final String sql = "UPDATE product SET pro_name = ?, pro_price = ?, pro_unit = ?, pro_weight = ?, pro_packaging";
+		result = template.update(sql, new PreparedStatementSetter() {
+			
+			@Override
+			public void setValues(PreparedStatement ps) throws SQLException{
+				ps.setString(1, product.getPro_name());
+				ps.setInt(2, product.getPro_price());
+				ps.setString(3, product.getPro_unit());
+				ps.setString(4, product.getPro_weight());
+				ps.setString(5, product.getPro_packaging());
+			}
+		});
+		return result;
 	}
 }

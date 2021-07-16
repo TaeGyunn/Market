@@ -35,4 +35,30 @@ public class ProductService implements IProductService {
 		}
 		return products;
 	}
+	
+	@Override
+	public Product productSearch(int pro_id) {
+		Product pro = dao.productSelect(pro_id);
+		
+		if(pro == null) {
+			System.out.println("product select fail");
+		}else {
+			System.out.println("product select success");
+		}
+		
+		return pro;
+	}
+	
+	@Override
+	public Product productModify(Product product) {
+		int result = dao.productUpdate(product);
+		
+		if(result == 0) {
+			System.out.println("Modify Fail");
+			return null;
+		}else {
+			System.out.println("Modify Success");
+		}
+		return product;
+	}
 }

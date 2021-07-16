@@ -46,7 +46,7 @@ public class MemberService implements IMemberService{
 			System.out.println("Modify Fail");
 			return null;
 		}else {
-			System.out.println("Modify Sucess");
+			System.out.println("Modify Success");
 		}
 		
 		return member;

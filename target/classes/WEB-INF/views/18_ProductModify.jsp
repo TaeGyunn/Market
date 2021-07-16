@@ -23,13 +23,13 @@
 		<c:forEach var="pro" items="${list}">
 			<tr>
 				<td>
-					${pro.pro_id}
+					<a href="/19_ProductDetail/${pro.pro_id}">${pro.pro_id}</a>
 				</td>
 				<td>
-					<img src ="/resources/uploadimg/${pro.proimg}" width="120px" height="110px">
+					<img src ="/resources/uploadimg/${pro.pro_img}" width="120px" height="110px">
 				</td>
 				<td>
-					<a href="/">${pro.pro_name}</a>
+					${pro.pro_name}
 				</td>
 				<td>
 					${pro.pro_price}

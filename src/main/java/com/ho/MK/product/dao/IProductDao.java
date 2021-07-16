@@ -7,5 +7,7 @@ import com.ho.MK.product.Product;
 public interface IProductDao {
 	int productInsert(Product product);
 	List<Product> listProduct();
+	Product productSelect(int pro_id);
+	int productUpdate(Product product);
 	
 }

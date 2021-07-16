@@ -8,6 +8,7 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
@@ -34,6 +35,7 @@ public class ProductController {
 				MultipartFile mf = request.getFile("pro_image");
 				if(mf == null) {System.out.println("null");}
 				String path = request.getSession().getServletContext().getRealPath("/");
+				System.out.println(path);
 				String attach_path = "resources/uploadimg/";
 				String fileName = mf.getOriginalFilename();
 				File uploadFile = new File(path+attach_path+fileName);
@@ -58,5 +60,24 @@ public class ProductController {
 				mav.addObject("list", service.listProduct());
 				return mav;
 			}
+			@RequestMapping("/ProductModify")
+			public String ProductModify(@ModelAttribute("pro")Product product, HttpSession session) {
+				Product pro = service.productModify(product);
+				if(pro == null) {
+					return "/19_ProductDetail";
+				}
+				System.out.println("Modify Success");
+				return "/16_AdminForm";
+			}
+			
+			
+			//Product Select
+			@RequestMapping("/19_ProductDetail/{pro_id}")
+			public String ProductDetail(@ModelAttribute("pro")Product product, HttpSession session, @PathVariable("pro_id")int pro_id) {
+				Product pro = service.productSearch(pro_id);
+				session.setAttribute("pro", pro);
+				return"/19_ProductDetail";
+			}
+			
 			
 }
