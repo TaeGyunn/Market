@@ -9,4 +9,5 @@ public interface IProductService {
 	List<Product> listProduct();
 	Product productSearch(int pro_id);
 	Product productModify(Product product);
+	void ProductDelete(int pro_id);
 }

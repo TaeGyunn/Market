@@ -105,4 +105,6 @@ public class MemberController {
 		return "/01_Main";
 		
 	}
+	
+	
 }

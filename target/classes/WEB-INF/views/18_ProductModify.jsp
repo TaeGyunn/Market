@@ -19,6 +19,7 @@
 			<th>상품명</th>
 			<th>상품이미지</th>
 			<th>가격</th>
+			<th>삭제</th>
 		</tr>
 		<c:forEach var="pro" items="${list}">
 			<tr>
@@ -33,6 +34,9 @@
 				</td>
 				<td>
 					${pro.pro_price}
+				</td>
+				<td>
+					<a href="/ProductDelete/${pro.pro_id}">삭제</a>
 				</td>
 			</tr>
 		</c:forEach>

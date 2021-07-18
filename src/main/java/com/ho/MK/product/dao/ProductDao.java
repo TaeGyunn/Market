@@ -117,4 +117,20 @@ public class ProductDao implements IProductDao {
 		});
 		return result;
 	}
+	
+	@Override
+	public int productDelete(final int proid) {
+		
+		int result = 0;
+		
+		final String sql = "DELETE FROM product WHERE pro_id = ?";
+		result = template.update(sql, new PreparedStatementSetter() {
+			
+			@Override
+			public void setValues(PreparedStatement ps) throws SQLException{
+				ps.setInt(1, proid);
+			}
+		});
+		return result;
+	}
 }

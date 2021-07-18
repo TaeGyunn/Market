@@ -61,4 +61,16 @@ public class ProductService implements IProductService {
 		}
 		return product;
 	}
+	
+	@Override
+	public void ProductDelete(int pro_id) {
+		
+		int result = dao.productDelete(pro_id);
+		
+		if(result == 0) {
+			System.out.println("Delete Fail");
+		}else {
+			System.out.println("Delete Success");
+		}
+	}
 }

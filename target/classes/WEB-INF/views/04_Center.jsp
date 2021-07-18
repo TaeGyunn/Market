@@ -7,34 +7,29 @@
 <meta charset="UTF-8">
 <title>Center</title>
 <style>
-	body{
-		padding : 0;	margin : 0 auto;
-	}
+	*{margin:0 auto;}
 	
 	.center{
-		 margin-top : 10px; 
-	}
-	.center1{
-		width:100%;	height: 400px;
+		 margin-top : 10px; text-align:center;
 	}
 	.center button{
 		border:none; cursor:pointer; padding:0; display: none;
 	}
 	.left{
-		position: absolute; left : 20%; top:35%;
+		position: absolute; left : 35%; top:35%;
 		
 	}
 	.right{
-		position: absolute;	right: 20%; top:35%;
+		position: absolute;	right: 35%; top:35%;
 	}	
 	.btn-img{
-		width:35px; height:350px; 
+		width:35px; height:50px; 
 	}
 </style>
 </head>
 <body>
 	<div class="center">	
-			<img src="resources/img/center_logo1.jpg" width="100%" height="368px" id="photo" onmouseover = "onbtn()" onmouseleave="offbtn()">
+			<img src="resources/img/center_logo1.jpg" width="50%" height="368px" id="photo" onmouseover = "onbtn()" onmouseleave="offbtn()">
 				<button class="left" id ="left" onclick="gallery(0)"><img class="btn-img" src="resources/img/btn_right.jpg"></button>
 				<button class="right" id="right" onclick="gallery(1)"><img class="btn-img" src="resources/img/btn_left.jpg"></button>
 		</div>

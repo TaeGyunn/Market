@@ -9,5 +9,6 @@ public interface IProductDao {
 	List<Product> listProduct();
 	Product productSelect(int pro_id);
 	int productUpdate(Product product);
+	int productDelete(int pro_id);
 	
 }

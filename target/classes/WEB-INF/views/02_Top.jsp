@@ -8,7 +8,7 @@
 <title>Top</title>
 <style> 
 	body{
-		margin : 0; padding: 0;
+		*{margin:0 auto;}
 	}
 	.top{
 		width : 100%;	height : 200px;
@@ -173,7 +173,7 @@
 						|
 						<a href="#">신상품</a>
 						|
-						<a href="#">베스트</a>
+						<a href="/20_Best">베스트</a>
 						|
 						<a href="#">알뜰쇼핑</a>
 						|

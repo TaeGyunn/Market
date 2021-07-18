@@ -14,6 +14,7 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.ho.MK.member.Member;
 import com.ho.MK.product.Product;
 import com.ho.MK.product.service.ProductService;
 
@@ -79,5 +80,20 @@ public class ProductController {
 				return"/19_ProductDetail";
 			}
 			
+			//Product Delete
+			@RequestMapping("/ProductDelete/{pro_id}")
+			public String ProductDelete(HttpSession session, @PathVariable("pro_id")int pro_Id) {
+				service.ProductDelete(pro_Id);
+				
+				return "/16_AdminForm";
+			}
+			
+			//Best
+			@RequestMapping(value="/20_Best")
+			public ModelAndView Best(@ModelAttribute("mem")Member member, ModelAndView mav, @ModelAttribute("pro")Product product) {
+				mav.setViewName("/20_Best");
+				mav.addObject("list" ,service.listProduct());
+				return mav;
+			}
 			
 }
