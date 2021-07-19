@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.view.RedirectView;
 
 import com.ho.MK.member.Member;
 import com.ho.MK.product.Product;
@@ -95,5 +96,15 @@ public class ProductController {
 				mav.addObject("list" ,service.listProduct());
 				return mav;
 			}
+			
+			//BestDetail
+			@RequestMapping("/21_BestDetail")
+			public  ModelAndView BestDetail(ModelAndView mav, @ModelAttribute("pro")Product product) {
+				Product pro = service.productSearch(product.getPro_id());
+				mav.setViewName("/21_BestDetail");
+				mav.addObject("pro", pro);
+				return mav;
+			}
+			
 			
 }
